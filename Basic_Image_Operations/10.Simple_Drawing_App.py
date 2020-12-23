@@ -33,8 +33,8 @@ while True:
 		break
 	elif ch & 0xFF == ord('b'):
 		color = (255,0,0)
-	elif ch & 0xFF == ord('g'):
-		color = (0,255,0)
+	elif ch & 0xFF == ord('r'):
+		color = (0,0,255)
 	
 
 cv2.destroyAllWindows()

@@ -16,7 +16,7 @@ while(True):
 	frame = cv2.resize(frame, (0,0), fx=0.5,fy=0.5)
 	cv2.imshow("Frame",frame)
 
-	# The main thing should make sure is to register a wait key, because if we don't register a legitimate exit to our loop, 
+	# The main thing one should make sure is to register a wait key, because if we don't register a legitimate exit to our loop, 
 	# then we may end up getting stuck and have to force quit the application
 
 	# This will indicate that it'll run every one millisecond.If you were to pass a value of 10, it would wait 10 milliseconds before the 

@@ -1,4 +1,4 @@
-# Now, We're going to be drawing a circle onto the screen and we're going to be placing the circle based on wherever we have last clicked
+# Now, We're going to draw a circle onto the screen and we're going to place the circle based on wherever we have last clicked
 
 import numpy as np
 import cv2
@@ -21,7 +21,8 @@ def click(event, x, y, flags, param):
 		point = (x,y)
 
 
-# Note that we can also capture other events such as event r button down, event l button up or even event underscore mouse move. The final step is to register this click with the open cv handler.
+# Note that we can also capture other events such as event r button down, event l button up or even event underscore mouse move.
+# The final step is to register this click with the open cv handler.
 cv2.namedWindow("Frame")
 cv2.setMouseCallback("Frame",click)
 

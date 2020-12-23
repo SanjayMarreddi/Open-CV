@@ -18,8 +18,8 @@ r = color[:,:,2]
 
 # We can reuse our channels to create the 4th Channel which acts as Transparency Layer
 
-# If for example, We want to make the Non Green Parts of the Image Transparent we could pass the g cahnnel as 4th Layer
-# Where a High Value or a very green pixel will show as a high Aplha Layer (Not Transparent)
+# If for example, We want to make the Non Green Parts of the Image Transparent we could pass the g channel as 4th Layer
+# Where a High Value or a very green pixel will show as a high Alpha Layer (Not Transparent)
 
 rgba = cv2.merge((b,g,r,g))
 

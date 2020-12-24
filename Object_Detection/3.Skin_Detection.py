@@ -10,7 +10,7 @@ import cv2
 
 img = cv2.imread('faces.jpeg',1)
 
-# Conver into HSV format
+# Convert into HSV format
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 h = hsv[:,:,0]
 s = hsv[:,:,1]

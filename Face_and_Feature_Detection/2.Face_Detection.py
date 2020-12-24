@@ -29,7 +29,7 @@ face_cascade = cv2.CascadeClassifier(path)
 
 # minNeighbors, This factor sets a number of nearby object detections required before it's considered a face
 
-#Th en, in this last factor, is the actual minimum size of a face to count before it's detected and in your last parenthesis
+#Then, in this last factor, is the actual minimum size of a face to count before it's detected and in your last parenthesis
 
 # We note that the result of this operation is creating a list that contains all the bounding boxes for detected faces. If there are no faces found in an image, the length of a list would be set as zero
 
@@ -50,4 +50,4 @@ cv2.imshow("Image",img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-# You can typically (mumbles) the classifier used to improve your results or you can train your own data.
+# You can typically tweak the classifier to improve your results or you can train your own data.

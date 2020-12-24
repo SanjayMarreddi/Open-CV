@@ -17,7 +17,7 @@ cv2.imshow("Binary",thresh)
 
 
 # Now lets add Contours.
-_, contours, _ = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+contours, _ = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 print(len(contours)) # To know how many objects are recognized
 
 # According to the task here, we want to make sure that we only draw the largest contours, so to do this we actually want to run some filtering on our contours.

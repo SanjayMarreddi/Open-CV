@@ -19,7 +19,6 @@
  
  # The result, is a black and white gray scale image with varying intensities showing how well it matched at each position. 
  
-
  #  Typically, template matching is actually applied in a two-dimensional format but the concept is the same as 1D, your source template image will scroll horizontally and vertically across the entire image, taking a difference at each location. 
  
  # The sum result of that difference is put into the pixel value, where a zero sum difference mean the exact same images becomes white and a perfect difference become black. Typically you'll find there's lots of gray in your image as there are always going to be partial matches of some of the pixels in the template versus your image. 
@@ -44,7 +43,7 @@ cv2.imshow("Template",template)
 # Running Template Matching
 result = cv2.matchTemplate(frame, template, cv2.TM_CCOEFF_NORMED)
 
-# Now we're going to do now is try and draw that location by getting the maximum brightness out of the result image.
+# Now we're going to try and draw that location by getting the maximum brightness out of the result image.
 
 min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
 print(max_val,max_loc)

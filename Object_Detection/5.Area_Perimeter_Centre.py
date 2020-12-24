@@ -8,7 +8,7 @@ gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 115, 1)
 cv2.imshow("Binary", thresh)
 
-_, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
 img2 = img.copy()
 index = -1
@@ -32,7 +32,7 @@ for c in contours:
 	# Coordinates of Centroid
 	cx = int( M['m10']/M['m00'])
 	cy = int( M['m01']/M['m00'])
-	cv2.circle(objects, (cx,cy), 4, (0,0,255), -1) # To drax Centroids
+	cv2.circle(objects, (cx,cy), 4, (0,0,255), -1) # To draw Centroids
 
 	print("Area: {}, perimeter: {}".format(area,perimeter))
 

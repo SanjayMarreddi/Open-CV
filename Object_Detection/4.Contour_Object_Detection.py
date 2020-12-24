@@ -22,10 +22,10 @@ gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 115, 1)
 cv2.imshow("Binary", thresh)
 
-# It actually Outputs 3 Values . We wont use 1st one. Followed by contours, which is the actually list of individual contours and recall that each contour is a list of points which describe a parameter of an object.
+# It actually Outputs 2 Values. 1st one is contours, which is the actually list of individual contours and recall that each contour is a list of points which describe a parameter of an object.
 
 #  Followed by hierarchy. Hierarchy is, essentially, a parent-child relationship of all the contours. A child, for example, would be if one contour is enclosed by another
-_, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
 img2 = img.copy() # Make a Deep Copy of Original IMAGE
 index = -1         # This'll be the index of the contour we want to draw and in this case, using an index value of minus one, we'll draw all the contours.
